@@ -9,9 +9,14 @@ class Solution {
             {
                 return mid;
             }
+            if (nums[l] == nums[mid] && nums[mid] == nums[r]) {
+                l++;
+                r--;
+                continue;
+            }
             if(nums[l]<=nums[mid])
             {
-                if(nums[l]<=target && target<nums[mid])
+                if(nums[l]<=target && target<nums[mid])  //right half array
                 {
                     r=mid-1;
                 }
